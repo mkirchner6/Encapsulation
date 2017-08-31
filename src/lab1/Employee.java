@@ -68,6 +68,9 @@ public class Employee {
     }
 
     public void setCubeId(String cubeId) {
+        if (cubeId.length() < 2 || cubeId.length() > 3){
+            throw new IllegalArgumentException("cubeId must be 2 characters long");
+        }
         this.cubeId = cubeId;
     }
 
