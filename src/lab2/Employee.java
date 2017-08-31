@@ -41,9 +41,16 @@ public class Employee {
         return sdf.format(orientationDate);
     }
     
+    public void newEmployeeOrientation(Employee e){
+        e.meetWithHrForBenefitAndSalryInfo(e);
+        e.meetDepartmentStaff(e);
+        e.reviewDeptPolicies(e);
+        e.moveIntoCubicle("E7",e);
+    }
+    
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired.
-    public void meetWithHrForBenefitAndSalryInfo(Employee e) {
+    private void meetWithHrForBenefitAndSalryInfo(Employee e) {
         metWithHr = true;
 //        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 //        String fmtDate = sdf.format(orientationDate); 
@@ -53,7 +60,7 @@ public class Employee {
 
     // Assume this must be performed second, and assume that an employee
     // would only do this once, upon being hired.:
-    public void meetDepartmentStaff(Employee e) {
+    private void meetDepartmentStaff(Employee e) {
         metDeptStaff = true;
 //        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 //        String fmtDate = sdf.format(orientationDate);        
@@ -64,7 +71,7 @@ public class Employee {
     // Assume this must be performed third. And assume that because department
     // policies may change that this method may need to be called 
     // independently from other classes.
-    public void reviewDeptPolicies(Employee e) {
+    private void reviewDeptPolicies(Employee e) {
         reviewedDeptPolicies = true;
 //        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 //        String fmtDate = sdf.format(orientationDate);        
@@ -75,7 +82,7 @@ public class Employee {
     // Assume this must be performed 4th. And assume that because employees
     // sometimes change office locations that this method may need to be called 
     // independently from other classes.
-    public void moveIntoCubicle(String cubeId, Employee e) {
+    private void moveIntoCubicle(String cubeId, Employee e) {
         this.cubeId = cubeId;
         this.movedIn = true;
 //        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
