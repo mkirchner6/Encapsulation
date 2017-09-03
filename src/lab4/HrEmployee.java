@@ -17,7 +17,7 @@ public class HrEmployee {
     public HrEmployee() {
     }
     
-    public void hireEmployee(String firstName, String lastName, String ssn) {
+    public void hireNewEmployee(String firstName, String lastName, String ssn) {
         Employee e = new Employee(firstName,lastName,ssn);
         listOfEmployees.add(e);
         orientNewEmployee(e);

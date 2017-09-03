@@ -10,5 +10,13 @@ package lab4;
  * @author mattkirchner
  */
 public class Company {
+    private HrEmployee hr;
     
+    public Company() {
+        hr = new HrEmployee();
+    }
+    
+    public void hireNewEmployee(String firstName, String lastName, String ssn) {
+        hr.hireNewEmployee(firstName, lastName, ssn);
+    }
 }
