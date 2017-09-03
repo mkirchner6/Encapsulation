@@ -40,9 +40,7 @@ public class HrEmployee {
         }
         
         if(e.isMetWithHr() && e.isReviewedDeptPolicies() && e.isMovedIn()) {
-            
             e.getReportService().outputReport();
-            
         }
         
         e.getReportService().outputReport();

@@ -18,6 +18,6 @@ public class Company {
     
     public void hireNewEmployee(String firstName, String lastName, String ssn) {
         hr.hireNewEmployee(firstName, lastName, ssn);
-        hr.outputReport(ssn);
+        hr.outputReport(ssn );
     }
 }
