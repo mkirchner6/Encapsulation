@@ -26,4 +26,25 @@ public class HrEmployee {
     public void orientNewEmployee(Employee e) {
         e.doFirstTimeOrientation("A7");
     }
+    
+    public void outputReport(String ssn) {
+        Employee e = null;
+        
+        for(Employee emp : listOfEmployees) {
+            if(emp.getSsn().equals(ssn)) {
+                e = emp;
+                break;
+            } else {
+                return;
+            }
+        }
+        
+        if(e.isMetWithHr() && e.isReviewedDeptPolicies() && e.isMovedIn()) {
+            
+            e.getReportService().outputReport();
+            
+        }
+        
+        e.getReportService().outputReport();
+    }
 }
