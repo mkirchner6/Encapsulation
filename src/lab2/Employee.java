@@ -99,6 +99,9 @@ public class Employee {
     // allowed through validation.
     
     public void setFirstName(String firstName) {
+        if (firstName.length() < 1 || firstName.length() > 25){
+            throw new IllegalArgumentException("First name must be between 1 and 25 characters");
+        }
        this.firstName = firstName;
     }
 
@@ -107,6 +110,9 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
+        if (lastName.length() < 1 || lastName.length() > 25){
+            throw new IllegalArgumentException("Last name must be between 1 and 25 characters");
+        }
        this.lastName = lastName;
     }
 
@@ -115,6 +121,9 @@ public class Employee {
     }
 
     public void setSsn(String ssn) {
+        if (ssn.length() < 8 || ssn.length() > 8){
+            throw new IllegalArgumentException("SSN must be 8 characters");
+        }
         this.ssn = ssn;
     }
 
@@ -157,6 +166,9 @@ public class Employee {
 
     
     public void setCubeId(String cubeId) {
+        if (cubeId.length() < 2 || cubeId.length() > 3){
+            throw new IllegalArgumentException("cubeId must be 2 characters long");
+        }
         this.cubeId = cubeId;
     }
 
